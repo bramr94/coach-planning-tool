@@ -17,7 +17,6 @@ class Appointment extends Model
         'date',
         'start_time',
         'end_time',
-
     ];
 
     protected $casts = [
