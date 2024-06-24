@@ -56,7 +56,7 @@ vendor/bin/phpunit
 
 ## Endpoints
 
-Postman collection: [LiveWall Assessment.postman_collection.json](LiveWall assessment.postman_collection.json)
+Postman collection: [Collection](https://github.com/bramr94/coach-planning-tool/blob/develop/LiveWall%20assessment.postman_collection.json)
 
 ### API config
 
