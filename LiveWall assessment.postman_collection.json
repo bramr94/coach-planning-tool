@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "34da1aa8-f3c8-4029-832f-f9cbc2f311a7",
+		"name": "LiveWall assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20008656"
+	},
+	"item": [
+		{
+			"name": "Authenticated calls",
+			"item": [
+				{
+					"name": "Coaches",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://livewall-assessment.test/api/coaches",
+									"protocol": "http",
+									"host": [
+										"livewall-assessment",
+										"test"
+									],
+									"path": [
+										"api",
+										"coaches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|3z3w5NFV9qqbd4YSUVjEuEb7GZjB50x7qbWmL6RFcce7ac2a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://livewall-assessment.test/api/coaches/1",
+									"protocol": "http",
+									"host": [
+										"livewall-assessment",
+										"test"
+									],
+									"path": [
+										"api",
+										"coaches",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Appointments",
+					"item": [
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "date",
+											"value": "2024-06-24",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "09:45:00",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "10:30:00",
+											"type": "text"
+										},
+										{
+											"key": "coach_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://livewall-assessment.test/api/appointments",
+									"protocol": "http",
+									"host": [
+										"livewall-assessment",
+										"test"
+									],
+									"path": [
+										"api",
+										"appointments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "dev@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://livewall-assessment.test/api/logout",
+							"protocol": "http",
+							"host": [
+								"livewall-assessment",
+								"test"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://livewall-assessment.test/api/me",
+							"protocol": "http",
+							"host": [
+								"livewall-assessment",
+								"test"
+							],
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "1|t8JiAm0ewXqHupCnFFw6rBmxwBf28AHbZZdMvEHp2fb7baf6",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "dev@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://livewall-assessment.test/api/login",
+					"protocol": "http",
+					"host": [
+						"livewall-assessment",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
